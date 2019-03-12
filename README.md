@@ -17,3 +17,11 @@ Download from this link : https://bit.ly/2TzxXfB
 Django AdminLTE 2 Documentation Download from : https://bit.ly/2TMfECY
 
 Django AdminLTE 2 Theme Download from : https://bit.ly/2SY7VgU
+
+# Steps
+- Activate Virtual Environment
+- Set directory path of project
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver
+- Paste this url in your browser : http://127.0.0.1:8000/
