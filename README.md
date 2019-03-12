@@ -31,13 +31,8 @@ Django AdminLTE 2 Theme Download from : https://bit.ly/2SY7VgU
 
 ![](images/login.png)
 
-![](images/forget_password.png)
-
-![](images/forget_password.png)
-
 ![](images/Home.png)
 
 ![](images/Emp_Add.png)
 
-![](images/Emp_Table)
-
+![](images/Emp_Table.png)
