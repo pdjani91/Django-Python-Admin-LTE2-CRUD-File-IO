@@ -27,27 +27,17 @@ Django AdminLTE 2 Theme Download from : https://bit.ly/2SY7VgU
 - Paste this url in your browser : http://127.0.0.1:8000/
 
 # Screen Shot
-- SignUp Page
 ![](images/signup.png)
 
-- Login Page
 ![](images/login.png)
 
-- Forgot Password Page
 ![](images/forget_password.png)
 
-- Change Password Page
 ![](images/forget_password.png)
 
-- Password Resset Page
-![](images/.png)
-
-- Home Page
 ![](images/Home.png)
 
-- Employees Details Insert Page
 ![](images/Emp_Add.png)
 
-- Employees Details Table Page
 ![](images/Emp_Table)
 
