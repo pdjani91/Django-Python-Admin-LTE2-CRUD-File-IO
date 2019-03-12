@@ -36,9 +36,18 @@ Django AdminLTE 2 Theme Download from : https://bit.ly/2SY7VgU
 - Forgot Password Page
 ![](images/forget_password.png)
 
+- Change Password Page
+![](images/forget_password.png)
+
+- Password Resset Page
+![](images/.png)
+
 - Home Page
 ![](images/Home.png)
 
 - Employees Details Insert Page
-![](images/Emp Add.png)
+![](images/Emp_Add.png)
+
+- Employees Details Table Page
+![](images/Emp_Table)
 
