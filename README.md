@@ -25,3 +25,5 @@ Django AdminLTE 2 Theme Download from : https://bit.ly/2SY7VgU
 - python manage.py migrate
 - python manage.py runserver
 - Paste this url in your browser : http://127.0.0.1:8000/
+
+# Screen Shot
