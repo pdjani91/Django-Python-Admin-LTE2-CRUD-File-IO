@@ -1,0 +1,44 @@
+{% extends 'adminlte/base.html' %}
+
+{% block content %}
+<div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title"><strong>{{ header }}</strong></h3>
+            </div>
+            <div class="box-body">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>ID</th>
+                    <th>Model Name</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Issues</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in items %}
+                  <tr>
+                    <td>{{ item.pk }}</td>
+                    <td>{{ item.device_type }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.status }}</td>
+                    <td>{{ item.issues }}</td>
+                    <td>
+                      <a href="/mobile_edit/{{ item.id}}"><span class="btn btn-primary btn-sm">Edit</span></a>
+                      <a href="/mobile_delete/{{ item.id}}"><span class="btn btn-danger btn-sm">Delete</span></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+</div>
+</div>
+</div>
+</div>
+  <center><a href="{% url "mobile" %}" class="btn btn-primary">Add New Record</a></center>
+
+{% endblock %}

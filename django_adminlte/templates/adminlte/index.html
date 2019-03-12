@@ -1,0 +1,87 @@
+{% extends 'adminlte/base.html' %}
+
+{% block content %}
+<div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+    <div class="small-box bg-yellow">
+        <div class="inner">
+            <h3>{{ user_count }}</h3>
+            <p>User Registrations</p>
+        </div>
+        <div class="icon">
+              <i class="fas fa-user"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+    <div class="small-box bg-green">
+        <div class="inner">
+            <h3>{{ employee_count }}</h3>
+            <p>Total Employee</p>
+        </div>
+        <div class="icon">
+              <i class="fas fa-user-tie"></i>
+        </div>
+        <a href="{% url "show" %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+    <div class="small-box bg-aqua">
+        <div class="inner">
+            <h3>{{ laptop_count }}</h3>
+            <p>Total Laptop</p>
+        </div>
+        <div class="icon">
+              <i class="fas fa-laptop"></i>
+        </div>
+        <a href="{% url "laptop_show" %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+    <div class="small-box bg-red">
+        <div class="inner">
+            <h3>{{ desktop_count }}</h3>
+            <p>Total Desktop</p>
+        </div>
+        <div class="icon">
+              <i class="fas fa-desktop"></i>
+        </div>
+        <a href="{% url "desktop_show" %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+    <div class="small-box bg-blue">
+        <div class="inner">
+            <h3>{{ mobile_count}}</h3>
+            <p>Total Mobile</p>
+        </div>
+        <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+        </div>
+        <a href="{% url "mobile_show" %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+    <div class="small-box bg-blue">
+        <div class="inner">
+            <h3>{{ file_io_count }}</h3>
+            <p>Total CSV Files</p>
+        </div>
+        <div class="icon">
+              <i class="fas fa-file-csv"></i>
+        </div>
+        <a href="{% url "csv_show" %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+{% endblock %}

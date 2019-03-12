@@ -1,0 +1,28 @@
+{% extends 'adminlte/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <br>
+            <button type="submit" class="btn btn-primary">Load File</button>
+        </form>
+<br>
+<div class="col-sm-3">
+    <table class="table table-bordered " border="1">
+        {% for row in excel_data %}
+        <tr>
+            {% for cell in row %}
+               <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+	</table>
+</div>
+
+{% endblock %}

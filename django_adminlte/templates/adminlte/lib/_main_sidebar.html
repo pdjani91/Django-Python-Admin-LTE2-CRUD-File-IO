@@ -1,0 +1,193 @@
+{% load adminlte_helpers %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        {% block user_panel %}
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="{% avatar_url size=90 %}" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>{% firstof request.user.get_full_name request.user.username %}</p>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block form %}{% endblock %}
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        {% block nav_links_ul %}
+        <ul class="sidebar-menu">
+            {% block nav_links_outer %}
+            <li class="header">{% block nav_heading %}MAIN NAVIGATION{% endblock %}</li>
+
+            {% block nav_links %}
+                <li>
+                    <a href="{% url "home" %}">
+                        <i class="fas fa-home"></i> <span>Home</span>
+                    </a>
+                </li>
+                
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fas fa-users"></i> <span>Employees Management</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="{% url "emp" %}">
+                                <i class="fas fa-user-plus"></i> Registration
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url "show" %}">
+                                <i class="far fa-eye"></i> Views
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            <li class="treeview">
+            <a href="#">
+            <i class="fas fa-warehouse"></i> <span>Inventory</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fas fa-laptop"></i> Laptop
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="{% url "laptop" %}"><i class="far fa-plus-square"></i> Insert</a>
+                  <a href="{% url "laptop_show" %}"><i class="far fa-eye"></i> View</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fas fa-desktop"></i> Desktop
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="{% url "desktop" %}"><i class="far fa-plus-square"></i> Insert</a>
+                  <a href="{% url "desktop_show" %}"><i class="far fa-eye"></i> View</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fas fa-mobile-alt"></i> Mobile
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="{% url "mobile" %}"><i class="far fa-plus-square"></i> Insert</a>
+                  <a href="{% url "mobile_show" %}"><i class="far fa-eye"></i> View</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+            <li class="treeview">
+            <a href="#">
+            <i class="fas fa-file-csv"></i> <span>File I/O</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fas fa-file-csv"></i> Basic Upload
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="{% url "upload_csv" %}"><i class="far fa-plus-square"></i> Insert</a>
+                  <!-- <a href=""><i class="far fa-eye"></i> View</a> -->
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fas fa-file-csv"></i> Model Base Upload
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="{% url "csv_list" %}"><i class="far fa-plus-square"></i> Insert</a>
+                  <a href="{% url "csv_show" %}"><i class="far fa-eye"></i> View</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fas fa-file-csv"></i> Load Files
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="{% url "load_csv" %}"><i class="far fa-plus-square"></i> Insert</a>
+                  <!-- <a href=""><i class="far fa-eye"></i> View</a> -->
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+                    <a href="#">
+                        <i class="fas fa fa-bar-chart"></i> <span>Data Visualization</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-user-plus"></i> Add
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="far fa-eye"></i> Views
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+            {% endblock nav_links %}
+            {% endblock nav_links_outer %}
+        </ul>
+        {% endblock nav_links_ul %}
+    </section>
+    <!-- /.sidebar -->
+</aside>

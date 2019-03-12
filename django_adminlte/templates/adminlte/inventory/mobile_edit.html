@@ -1,0 +1,18 @@
+{% extends 'adminlte/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!-- Horizontal Form -->
+<div class="container">
+	<div class="box-header with-border">
+              <h3 class="box-title"><strong>Mobile Edit</strong></h3>
+            </div>
+<form method="POST" class="post-form col-sm-4">
+		{% csrf_token %}
+		{{form|crispy}}
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+
+</form>
+
+{% endblock %}

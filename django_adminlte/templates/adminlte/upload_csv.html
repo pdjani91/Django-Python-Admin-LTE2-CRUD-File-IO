@@ -1,0 +1,19 @@
+{% extends 'adminlte/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h1>File I/O Operations</h1>
+<br>
+<form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	
+	<input type="file" name="document"><br>
+	<button type="submit" class="btn btn-primary">Upload File</button>
+</form>
+<br>
+
+{% if url %}
+	<p>Uploaded File Path: <a href="{{ url }}" target="_blank">{{ url }}</a></p>
+{% endif %}
+ 
+{% endblock %}

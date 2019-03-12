@@ -1,0 +1,42 @@
+{% extends 'adminlte/base.html' %}
+
+{% block content %}
+<div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Employee Table</h3>
+            </div>
+            <div class="box-body">
+<table class="table table-bordered">
+		<thead class="thead-dark">
+			<tr>
+				<th>Employee ID</th>
+				<th>Employee Name</th>
+				<th>Employee Email</th>
+				<th>Employee Contact</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for employee in employees %}
+			<tr>
+				<td>{{ employee.eid }}</td>
+				<td>{{ employee.ename }}</td>
+				<td>{{ employee.eemail }}</td>
+				<td>{{ employee.econtact }}</td>
+				<td>
+					<a href="/edit/{{ employee.id}}"><span class="btn btn-primary btn-sm">Edit</span></a>
+					<a href="/delete/{{ employee.id}}"><span class="btn btn-danger btn-sm">Delete</span></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+</div>
+</div>
+</div>
+	<center><a href="{% url "emp" %}" class="btn btn-primary">Add New Record</a></center>
+
+{% endblock %}
