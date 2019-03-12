@@ -36,3 +36,15 @@ Django AdminLTE 2 Theme Download from : https://bit.ly/2SY7VgU
 ![](images/Emp_Add.png)
 
 ![](images/Emp_Table.png)
+
+![](images/desktop_add.png)
+
+![](images/desktop_inventory_table.png)
+
+![](images/File_IO.png)
+
+![](images/model_based_IO.png)
+
+![](images/File_IO_table.png)
+
+![](images/File_IO_Oprtaions.png)
